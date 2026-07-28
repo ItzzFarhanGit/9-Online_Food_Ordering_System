@@ -1,0 +1,468 @@
+/*====================================
+Delight Dinning Register Page
+====================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#ff6b00;
+    --primary-dark:#e85d04;
+    --secondary:#1f2937;
+    --light:#fff8f2;
+    --white:#ffffff;
+    --text:#333;
+    --shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+
+}
+
+.register-section{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+/*====================
+LEFT SIDE
+====================*/
+
+.register-image{
+
+    background:url("../images/restaurant.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.60);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    color:#fff;
+
+    padding:40px;
+
+}
+
+.overlay img{
+
+    width:120px;
+
+    margin-bottom:20px;
+
+}
+
+.overlay h1{
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+}
+
+.overlay p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    max-width:420px;
+
+}
+
+/*====================
+RIGHT SIDE
+====================*/
+
+.register-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.register-card{
+
+    width:100%;
+
+    max-width:550px;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.register-card h2{
+
+    font-size:34px;
+
+    color:var(--secondary);
+
+    margin-bottom:10px;
+
+}
+
+.register-card p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+/*====================
+FORM
+====================*/
+
+.input-box{
+
+    margin-bottom:18px;
+
+}
+
+.input-box label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:2px solid #eee;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.input-box input:focus{
+
+    border-color:var(--primary);
+
+}
+
+/*====================================
+PASSWORD BOX
+====================================*/
+
+.password-box{
+
+    display:flex;
+
+    align-items:center;
+
+    border:2px solid #eee;
+
+    border-radius:12px;
+
+    padding:0 10px;
+
+    transition:.3s;
+
+}
+
+.password-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:16px 10px;
+
+    font-size:16px;
+
+}
+
+.password-box i{
+
+    cursor:pointer;
+
+    color:#777;
+
+    transition:.3s;
+
+}
+
+.password-box:focus-within{
+
+    border-color:var(--primary);
+
+}
+
+/*====================================
+BUTTON
+====================================*/
+
+.register-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-top:10px;
+
+}
+
+.register-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+/*====================================
+DIVIDER
+====================================*/
+
+.divider{
+
+    text-align:center;
+
+    margin:25px 0;
+
+    position:relative;
+
+}
+
+.divider span{
+
+    background:#fff;
+
+    padding:0 15px;
+
+    color:#777;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:0;
+
+    right:0;
+
+    height:1px;
+
+    background:#eee;
+
+    z-index:1;
+
+}
+
+/*====================================
+GOOGLE BUTTON
+====================================*/
+
+.google-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px;
+
+    border:2px solid #eee;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.google-btn:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
+
+/*====================================
+LINKS
+====================================*/
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    font-size:14px;
+
+}
+
+.login-link a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.back-home{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:20px;
+
+    color:#666;
+
+    font-size:14px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.back-home:hover{
+
+    color:var(--primary);
+
+}
+
+/*====================================
+RESPONSIVE
+====================================*/
+
+@media(max-width:992px){
+
+.register-section{
+
+    grid-template-columns:1fr;
+
+}
+
+.register-image{
+
+    height:300px;
+
+}
+
+.overlay h1{
+
+    font-size:34px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.register-card{
+
+    padding:30px 20px;
+
+}
+
+.register-card h2{
+
+    font-size:26px;
+
+}
+
+}

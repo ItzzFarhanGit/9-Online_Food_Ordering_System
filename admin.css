@@ -1,0 +1,213 @@
+/* ====================================================
+   Delight Dinning Admin Panel CSS
+   ==================================================== */
+
+.admin-section {
+    padding: 60px 0;
+    background: #FFF8F2;
+    min-height: 85vh;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-title h1 {
+    font-size: 32px;
+    color: #1F2937;
+}
+
+.admin-title p {
+    font-size: 16px;
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+/* Orders Cards layout */
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.order-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    border: 1px solid #eee;
+}
+
+.order-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.order-id {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FF6B00;
+}
+
+.order-date {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.placed {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.status-badge.preparing {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status-badge.out {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-badge.delivered {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.status-badge.cancelled {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.order-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .order-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.customer-info h4,
+.items-info h4 {
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #4b5563;
+}
+
+.info-item span {
+    color: #9ca3af;
+    display: inline-block;
+    width: 120px;
+}
+
+/* Actions */
+.order-actions {
+    margin-top: 20px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.action-btn.prepare {
+    background: #fbbf24;
+    color: #fff;
+}
+.action-btn.prepare:hover {
+    background: #d97706;
+}
+
+.action-btn.dispatch {
+    background: #34d399;
+    color: #fff;
+}
+.action-btn.dispatch:hover {
+    background: #059669;
+}
+
+.action-btn.deliver {
+    background: #6b7280;
+    color: #fff;
+}
+.action-btn.deliver:hover {
+    background: #374151;
+}
+
+.action-btn.cancel {
+    background: #f87171;
+    color: #fff;
+}
+.action-btn.cancel:hover {
+    background: #dc2626;
+}
+
+.action-btn.reset {
+    background: #60a5fa;
+    color: #fff;
+}
+.action-btn.reset:hover {
+    background: #2563eb;
+}
+
+.track-btn {
+    background: #FF6B00;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: auto;
+}
+.track-btn:hover {
+    background: #e05e00;
+}

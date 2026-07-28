@@ -1,0 +1,571 @@
+/*====================================
+Delight Dinning - About Page
+====================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#ff6b00;
+    --primary-dark:#e85d04;
+    --secondary:#1f2937;
+    --light:#fff8f2;
+    --white:#ffffff;
+    --text:#333;
+    --gray:#777;
+    --shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:var(--text);
+
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+
+}
+
+/*====================================
+HEADER
+====================================*/
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    z-index:999;
+
+}
+
+.navbar{
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:55px;
+
+}
+
+.logo span{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover,
+nav .active{
+
+    color:var(--primary);
+
+}
+
+.login-btn{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:12px 28px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/*====================================
+HERO
+====================================*/
+
+.about-hero{
+
+    padding:90px 0;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#fff8f2,#ffffff);
+
+}
+
+.about-hero h1{
+
+    font-size:50px;
+
+    color:var(--secondary);
+
+    margin-bottom:10px;
+
+}
+
+.about-hero p{
+
+    font-size:18px;
+
+    color:var(--gray);
+
+}
+
+/*====================================
+STORY SECTION
+====================================*/
+
+.story{
+
+    padding:80px 0;
+
+}
+
+.story-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.story-img img{
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.story-text h2{
+
+    font-size:38px;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.story-text p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:15px;
+
+    font-size:16px;
+
+}
+
+/*====================================
+MISSION SECTION
+====================================*/
+
+.mission{
+
+    background:#fff;
+
+    padding:70px 0;
+
+    text-align:center;
+
+}
+
+.mission h2{
+
+    font-size:38px;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.mission p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    color:#555;
+
+    line-height:1.9;
+
+    background:var(--light);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/*====================================
+CHEFS SECTION
+====================================*/
+
+.chefs{
+
+    padding:80px 0;
+
+    text-align:center;
+
+}
+
+.chefs h2{
+
+    font-size:38px;
+
+    margin-bottom:50px;
+
+    color:var(--secondary);
+
+}
+
+.chef-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.chef-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.chef-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.chef-card img{
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+}
+
+.chef-card h3{
+
+    color:var(--secondary);
+
+    margin-bottom:5px;
+
+}
+
+.chef-card p{
+
+    color:var(--primary);
+
+    font-weight:500;
+
+}
+
+/*====================================
+FOOTER
+====================================*/
+
+footer{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    padding:70px 0 20px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:35px;
+
+}
+
+.footer-grid h2,
+.footer-grid h3{
+
+    margin-bottom:20px;
+
+}
+
+.footer-grid p{
+
+    color:#ddd;
+
+    line-height:1.8;
+
+}
+
+.footer-grid ul li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-grid ul li a{
+
+    color:#ddd;
+
+    transition:.3s;
+
+}
+
+.footer-grid ul li a:hover{
+
+    color:var(--primary);
+
+}
+
+/*====================================
+SOCIAL ICONS
+====================================*/
+
+.social-icons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:15px;
+
+}
+
+.social-icons a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#374151;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+    background:var(--primary);
+
+}
+
+/*====================================
+COPYRIGHT
+====================================*/
+
+.copyright{
+
+    text-align:center;
+
+    margin-top:50px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    color:#bbb;
+
+}
+
+/*====================================
+RESPONSIVE DESIGN
+====================================*/
+
+@media(max-width:992px){
+
+.story-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.story-text{
+
+text-align:center;
+
+}
+
+.about-hero h1{
+
+font-size:38px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px 0;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+margin:20px 0;
+
+}
+
+.story-text h2,
+
+.mission h2,
+
+.chefs h2{
+
+font-size:30px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.container{
+
+width:94%;
+
+}
+
+.about-hero h1{
+
+font-size:30px;
+
+}
+
+.mission p{
+
+padding:20px;
+
+font-size:16px;
+
+}
+
+.chef-card{
+
+padding:20px;
+
+}
+
+}

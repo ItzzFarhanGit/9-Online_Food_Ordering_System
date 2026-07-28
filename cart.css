@@ -1,0 +1,1077 @@
+/*====================================
+Delight Dinning - Cart Page
+====================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*========== RESET ==========*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#ff6b00;
+    --primary-dark:#e85f00;
+    --secondary:#1f2937;
+    --light:#fff8f2;
+    --white:#ffffff;
+    --text:#333;
+    --gray:#777;
+    --border:#ececec;
+
+    --shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:var(--text);
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+
+}
+
+/*========== HEADER ==========*/
+
+header{
+
+    position:sticky;
+    top:0;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    z-index:999;
+
+}
+
+.navbar{
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:55px;
+
+}
+
+.logo span{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover,
+nav .active{
+
+    color:var(--primary);
+
+}
+
+.login-btn{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/*========== PAGE TITLE ==========*/
+
+.page-title{
+
+    padding:70px 0;
+
+    text-align:center;
+
+}
+
+.page-title h1{
+
+    font-size:48px;
+
+    color:var(--secondary);
+
+    margin-bottom:15px;
+
+}
+
+.page-title p{
+
+    color:var(--gray);
+
+    font-size:18px;
+
+}
+
+/*========== CART LAYOUT ==========*/
+
+.cart-section{
+
+    padding-bottom:80px;
+
+}
+
+.cart-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+}
+
+/*========== CART ITEMS ==========*/
+
+.cart-items{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/*====================================
+CART CARD
+====================================*/
+
+.cart-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.cart-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.cart-card img{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+}
+
+/*====================================
+CART INFO
+====================================*/
+
+.cart-info{
+
+    flex:1;
+
+}
+
+.cart-info h2{
+
+    font-size:28px;
+
+    color:var(--secondary);
+
+    margin-bottom:8px;
+
+}
+
+.cart-info p{
+
+    color:#FFC107;
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+}
+
+.cart-info h3{
+
+    color:var(--primary);
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+/*====================================
+QUANTITY
+====================================*/
+
+.qty{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+}
+
+.qty button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.qty button:hover{
+
+    background:var(--primary-dark);
+
+    transform:scale(1.08);
+
+}
+
+.qty input{
+
+    width:70px;
+
+    height:42px;
+
+    border:2px solid #eee;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+/*====================================
+REMOVE BUTTON
+====================================*/
+
+.remove{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#ff3b30;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.remove:hover{
+
+    color:#d60000;
+
+}
+
+/*====================================
+ORDER SUMMARY
+====================================*/
+
+.summary{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    position:sticky;
+
+    top:100px;
+
+    height:fit-content;
+
+}
+
+.summary h2{
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+    color:var(--secondary);
+
+}
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:18px;
+
+    color:#555;
+
+}
+
+.summary hr{
+
+    margin:20px 0;
+
+    border:none;
+
+    border-top:1px solid #eee;
+
+}
+
+.total{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:var(--secondary);
+
+}
+
+/*====================================
+COUPON
+====================================*/
+
+.summary input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:2px solid #eee;
+
+    border-radius:12px;
+
+    margin:20px 0 15px;
+
+    outline:none;
+
+    font-size:16px;
+
+}
+
+.apply{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#333;
+
+    color:#fff;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.apply:hover{
+
+    background:#000;
+
+}
+
+/*====================================
+CHECKOUT BUTTON
+====================================*/
+
+.checkout-btn{
+
+    display:block;
+
+    width:100%;
+
+    margin-top:18px;
+
+    text-align:center;
+
+    padding:18px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.checkout-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+/*====================================
+DELIVERY CARD
+====================================*/
+
+.delivery{
+
+    margin-top:30px;
+
+    padding:20px;
+
+    background:var(--light);
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+.delivery h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.delivery p{
+
+    color:#666;
+
+}
+
+/*====================================
+PAYMENT SECTION
+====================================*/
+
+.payment-section{
+
+    padding:80px 0;
+
+    background:#fff;
+
+}
+
+.payment-section h2{
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:50px;
+
+    color:var(--secondary);
+
+}
+
+.payment-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.payment-card{
+
+    background:var(--light);
+
+    border-radius:20px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.payment-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.payment-card i{
+
+    font-size:50px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.payment-card h3{
+
+    margin-bottom:12px;
+
+    color:var(--secondary);
+
+}
+
+.payment-card p{
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+
+/*====================================
+FOOTER
+====================================*/
+
+footer{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    padding:70px 0 20px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:35px;
+
+}
+
+.footer-grid h2,
+.footer-grid h3{
+
+    margin-bottom:20px;
+
+}
+
+.footer-grid p{
+
+    color:#ddd;
+
+    line-height:1.8;
+
+}
+
+.footer-grid ul li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-grid ul li a{
+
+    color:#ddd;
+
+    transition:.3s;
+
+}
+
+.footer-grid ul li a:hover{
+
+    color:var(--primary);
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:15px;
+
+}
+
+.social-icons a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#374151;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+    background:var(--primary);
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    margin-top:50px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    color:#bbb;
+
+}
+
+/*====================================
+FLOATING BUTTONS
+====================================*/
+
+.floating-buttons{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    z-index:999;
+
+}
+
+.float-btn{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:26px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+}
+
+.whatsapp{
+
+    background:#25D366;
+
+    animation:whatsappPulse 2s infinite;
+
+}
+
+.top{
+
+    background:var(--primary);
+
+}
+
+.float-btn:hover{
+
+    transform:translateY(-5px) scale(1.1);
+
+}
+
+@keyframes whatsappPulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(37,211,102,.6);
+
+}
+
+70%{
+
+box-shadow:0 0 0 18px rgba(37,211,102,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(37,211,102,0);
+
+}
+
+}
+
+/*====================================
+RESPONSIVE
+====================================*/
+
+@media(max-width:992px){
+
+.cart-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.summary{
+
+position:static;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px 0;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+margin:20px 0;
+
+}
+
+.cart-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.cart-card img{
+
+width:100%;
+
+height:240px;
+
+}
+
+.qty{
+
+justify-content:center;
+
+}
+
+.page-title h1{
+
+font-size:36px;
+
+}
+
+.payment-section h2{
+
+font-size:30px;
+
+}
+
+.footer-grid{
+
+text-align:center;
+
+}
+
+.social-icons{
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.container{
+
+width:94%;
+
+}
+
+.page-title h1{
+
+font-size:30px;
+
+}
+
+.cart-info h2{
+
+font-size:22px;
+
+}
+
+.cart-info h3{
+
+font-size:24px;
+
+}
+
+.summary{
+
+padding:20px;
+
+}
+
+.summary h2{
+
+font-size:24px;
+
+}
+
+.checkout-btn{
+
+font-size:16px;
+
+padding:15px;
+
+}
+
+.float-btn{
+
+width:55px;
+
+height:55px;
+
+font-size:22px;
+
+}
+
+}
+
+/* ==============================
+   WhatsApp Floating Button
+============================== */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:65px;
+
+    height:65px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+    transition:.3s;
+
+    animation:whatsappPulse 2s infinite;
+
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.12);
+
+    background:#20ba5a;
+
+}
+
+@keyframes whatsappPulse{
+
+    0%{
+        box-shadow:0 0 0 0 rgba(37,211,102,.6);
+    }
+
+    70%{
+        box-shadow:0 0 0 20px rgba(37,211,102,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+    }
+
+}
+

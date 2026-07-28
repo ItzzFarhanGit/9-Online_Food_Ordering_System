@@ -1,0 +1,717 @@
+/* =====================================
+   Delight Dinning Menu Page
+====================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#FF6B00;
+    --secondary:#1F2937;
+    --light:#FFF8F2;
+    --white:#ffffff;
+    --text:#333;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:var(--text);
+
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/*==============================
+HEADER
+==============================*/
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    z-index:999;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:80px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:55px;
+
+}
+
+.logo span{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:#333;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+nav a:hover,
+nav .active{
+
+    color:var(--primary);
+
+}
+
+.nav-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+}
+
+.cart{
+
+    position:relative;
+
+    color:#333;
+
+    font-size:22px;
+
+}
+
+.cart span{
+
+    position:absolute;
+
+    top:-8px;
+
+    right:-10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:11px;
+
+}
+
+.login-btn{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:35px;
+
+}
+
+/*==============================
+PAGE BANNER
+==============================*/
+
+.page-banner{
+
+    background:linear-gradient(rgba(0,0,0,.6),
+    rgba(0,0,0,.6)),
+    url("../images/banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    height:320px;
+
+    display:flex;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.page-banner h1{
+
+    font-size:60px;
+
+}
+
+.page-banner p{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+}
+
+/*==============================
+SEARCH
+==============================*/
+
+.search-area{
+
+    margin-top:-40px;
+
+}
+
+.search-box{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:60px;
+
+    display:flex;
+
+    box-shadow:var(--shadow);
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    font-size:18px;
+
+}
+
+.search-box button{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+}
+
+/*==============================
+FILTER BUTTONS
+==============================*/
+
+.menu-filter{
+
+    padding:60px 0;
+
+}
+
+.menu-filter .container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.menu-filter button{
+
+    padding:14px 30px;
+
+    border:none;
+
+    background:white;
+
+    border-radius:35px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.menu-filter button:hover,
+.menu-filter .active{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/*====================================
+FOOD SECTION
+====================================*/
+
+.foods{
+    padding:20px 0 80px;
+}
+
+.food-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/*====================================
+FOOD CARD
+====================================*/
+
+.food-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.food-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.food-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.35s;
+}
+
+.food-card:hover img{
+    transform:scale(1.08);
+}
+
+/*====================================
+DISCOUNT BADGE
+====================================*/
+
+.discount{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#ff3b30;
+    color:#fff;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    z-index:10;
+}
+
+/*====================================
+FAVORITE BUTTON
+====================================*/
+
+.favorite{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:42px;
+    height:42px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#ff3b30;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.favorite:hover{
+    background:#ff3b30;
+    color:#fff;
+}
+
+/*====================================
+FOOD INFO
+====================================*/
+
+.food-info{
+    padding:20px;
+}
+
+.food-info h3{
+    font-size:24px;
+    color:#1F2937;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:#FFC107;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.price{
+    color:#FF6B00;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+/*====================================
+BUTTONS
+====================================*/
+
+.buttons{
+    display:flex;
+    gap:12px;
+}
+
+.details,
+.cart-btn{
+    flex:1;
+    text-align:center;
+    padding:12px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.details{
+    border:2px solid #FF6B00;
+    color:#FF6B00;
+}
+
+.details:hover{
+    background:#FF6B00;
+    color:#fff;
+}
+
+.cart-btn{
+    background:#FF6B00;
+    color:#fff;
+}
+
+.cart-btn:hover{
+    background:#e65c00;
+}
+
+/*====================================
+FOOTER
+====================================*/
+
+footer{
+    background:#1F2937;
+    color:#fff;
+    padding:60px 0 20px;
+    margin-top:60px;
+}
+
+.footer-content{
+    text-align:center;
+}
+
+.footer-content h2{
+    margin-bottom:15px;
+}
+
+.footer-content p{
+    color:#ccc;
+}
+
+.footer-social{
+    margin-top:25px;
+}
+
+.footer-social a{
+    width:45px;
+    height:45px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#333;
+    color:#fff;
+    margin:0 8px;
+    transition:.3s;
+}
+
+.footer-social a:hover{
+    background:#FF6B00;
+}
+
+/*====================================
+FLOATING BUTTONS
+====================================*/
+
+.floating-buttons{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    z-index:999;
+}
+
+.float-btn{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:26px;
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.top{
+    background:#FF6B00;
+}
+
+.float-btn:hover{
+    transform:scale(1.12);
+}
+
+/*====================================
+RESPONSIVE
+====================================*/
+
+@media(max-width:992px){
+
+.page-banner h1{
+    font-size:46px;
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    height:auto;
+    padding:20px 0;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin:20px 0;
+}
+
+.nav-buttons{
+    margin-bottom:15px;
+}
+
+.page-banner{
+    height:250px;
+}
+
+.page-banner h1{
+    font-size:38px;
+}
+
+.search-box{
+    border-radius:20px;
+}
+
+.search-box button{
+    width:55px;
+    height:55px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+}
+
+@media(max-width:480px){
+
+.page-banner h1{
+    font-size:30px;
+}
+
+.page-banner p{
+    font-size:16px;
+}
+
+.food-info h3{
+    font-size:20px;
+}
+
+.price{
+    font-size:24px;
+}
+
+}
+
+/* ==============================
+   WhatsApp Floating Button
+============================== */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:65px;
+
+    height:65px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+    transition:.3s;
+
+    animation:whatsappPulse 2s infinite;
+
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.12);
+
+    background:#20ba5a;
+
+}
+
+@keyframes whatsappPulse{
+
+    0%{
+        box-shadow:0 0 0 0 rgba(37,211,102,.6);
+    }
+
+    70%{
+        box-shadow:0 0 0 20px rgba(37,211,102,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+    }
+
+}
+
